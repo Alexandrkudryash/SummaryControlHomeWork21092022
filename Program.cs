@@ -13,11 +13,13 @@ void FillArray(string[] collection)
     int index = 0;
     while(index < length)
     {
-        if (text1[index].Length <=3)
+        if (text1[index].Length <=3 && text1[index] !="")
         collection[index]= text1[index];
         index++;
     }
 }
+
+
 void PrintArray(string[] col)
 {
   int count = col.Length;
@@ -29,6 +31,7 @@ void PrintArray(string[] col)
     position++;
   }
 }
+
 
 int size = 0;
 for (int i = 0; i < text1.Length; i++)
@@ -45,25 +48,10 @@ Console.WriteLine("Задан такой массив");
 PrintArray(text1);
 
 Console.WriteLine();
-/*string[] newtext = new string[size];
 
-void ChangeArray(string[] col)
-{
-  int count = col.Length;
-  int position = 0;
-  while (position < count)
-  {
-    if(col[position].Length <=3)
-    Console.Write(col[position] +", ");
-    position++;
-  }
-}
-
-
-
+string[] newtext = new string[text1.Length];
 Console.WriteLine("Преобразуем в такой массив из строк <=3:");
 FillArray(newtext);
 PrintArray(newtext);
-Console.WriteLine();*/
-
+Console.WriteLine();
 
